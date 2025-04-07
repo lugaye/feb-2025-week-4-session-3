@@ -1,0 +1,26 @@
+.container {
+    width: 80%;
+    margin-left: 20%;
+    background-color: coral;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+@media (max-width: 600px) {
+    .container {
+        width: 100%;
+        margin: 0;
+        background-color: lightseagreen;
+    }
+
+    img {
+        display: none;
+    }
+
+    body{
+        font-size: 1.5em;
+    }
+}
