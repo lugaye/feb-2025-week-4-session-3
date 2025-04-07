@@ -20,7 +20,53 @@ img {
         display: none;
     }
 
-    body{
+    body {
         font-size: 1.5em;
+    }
+}
+
+/* flexible box layout */
+.flex-container {
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 50vh;
+    background-color: lightblue;
+    gap: 10px;
+}
+
+.flex-item{
+    background-color: grey;
+    padding: 20px;
+    flex: 1;
+}
+
+/* grid layout */
+.grid-container {
+    display: grid;
+    grid-template-areas: 
+        'header header header'
+        'menu main right'
+        'footer footer footer';
+    grid-gap: 10px;
+    padding: 10px;
+    background-color: lightgrey;
+}
+
+.grid-item1{ grid-area: header; background-color: lightcoral;}
+.grid-item2{ grid-area: menu; background-color: lightgoldenrodyellow;}
+.grid-item3{ grid-area: main; background-color: lightskyblue;}
+.grid-item4{ grid-area: right; background-color: lightgreen;}
+.grid-item5{ grid-area: footer; background-color: lightsalmon;}
+
+@media (max-width: 600px) {
+    .grid-container {
+        grid-template-areas: 
+            'header'
+            'main'
+            'menu'
+            'right'
+            'footer';
     }
 }
